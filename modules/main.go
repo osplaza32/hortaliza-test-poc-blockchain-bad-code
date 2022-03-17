@@ -94,7 +94,7 @@ func TransferEth(client ethclient.Client, amount string) (string, error) {
 	}()
 	ctx := context.Background()
 	// Assuming you've already connected a client, the next step is to load your private key.
-	privateKey, err := crypto.HexToECDSA("635526bb7702e675929b97d4bcf861ca7ef5c8eeef7240533917422a9fb7d91f")
+	privateKey, err := crypto.HexToECDSA("16eeaa454557542edc89b37520b6448791d37347b89dba73dc99e88f8bfb3aaa")
 	if err != nil {
 		return "", err
 	}
@@ -124,7 +124,7 @@ func TransferEth(client ethclient.Client, amount string) (string, error) {
 		return "", err
 	}
 	// We figure out who we're sending the ETH to.
-	toAddress := common.HexToAddress("0x3eb5879d4f75bd2682d3c67d2a688e28ff669e34")
+	toAddress := common.HexToAddress("0x3326d9cf3cdcb3364c2c7af5dac21ae6a4bed718")
 	data := []byte(amount)
 	// We create the transaction payload
 	tx := types.NewTransaction(nonce, toAddress, value, gasLimit, gasPrice, data)
